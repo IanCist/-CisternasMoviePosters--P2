@@ -34,11 +34,30 @@ const vue_app = Vue.createApp({
             // This holds your movies.json data.
             movies: [],
             /* ADD ADDITIONAL VARIABLES FOR STEP 3 HERE */
-         
-      }
+         appTitle: "IS219 Movie Gallery",
+         owner: "Ian Cisternas",
+         githubLink: "https://github.com/IanCist/-CisternasMoviePosters--P2"
+      };
     },
       methods: {
             /* ADD FUNCTIONS/METHODS FOR STEP 7 HERE */
+            makeTextDate(dateArray) {
+                  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                  const month = months[dateArray[1] - 1]; // Subtract 1 because months array is 0-indexed
+                  const day = dateArray[2];
+                  const year = dateArray[0];
+                  return `${month} ${day}, ${year}`;   
+            },
+            like(index) {
+                  if (this.movies[index]) {
+                        this.movies[index].likes++;
+                      }
+            },
+            disklike(index) {
+                  if (this.movies[index]) {
+                        this.movies[index].dislikes++;
+                      }
+            },
       }
 })
 
