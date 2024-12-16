@@ -40,7 +40,7 @@
 						<img :src="movie.posters[movie.posterindex]" class="poster img-fluid" :alt="movie.title"/>
 						<div class="imageInfo">{{ movie.posterindex + 1 }} / {{ movie.posters.length }}</div>
 
-						<p class="title">{{ movies[0].title }} ({{ movies[0].country }})</p>
+						<p class="title">{{ movies.title }} ({{ movies[0].country }})</p>
 						<p class="score"><i class="bi bi-star" aria-hidden="true"></i> {{ movies[0].iscore }} </p>
 						<p class="runtime">Runtime: {{ movies[0].runtime }}</p>
 						<p class="released">Released:{{ formatReleaseDate(movies[0].released) }} | Rated: {{ movies[0].rating }}</p>
