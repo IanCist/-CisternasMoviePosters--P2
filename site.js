@@ -53,14 +53,18 @@ const vue_app = Vue.createApp({
                         this.movies[index].likes++;
                       }
             },
-            disklike(index) {
+            dislike(index) {
                   if (this.movies[index]) {
                         this.movies[index].dislikes++;
                       }
             },
             posterClick(index) {
-                  console.log(`Poster clicked for movie: ${this.movies[index].title}`);
-                },
+                  const movie = this.movies[index];
+                  if (movie) {
+                      movie.posterindex = (movie.posterindex + 1) % movie.posters.length;
+                      console.log(`Poster clicked for "${movie.title}". New poster index: ${movie.posterindex}`);
+                  }
+              },
                 timeText(minutes) {
                   const hours = Math.floor(minutes / 60);
                   const mins = minutes % 60;

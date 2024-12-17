@@ -37,19 +37,30 @@
 	        <div class="col-md-6">
 	            <div class="thumbnail">
 
-						<img :src="movie.posters[movie.posterindex]" class="poster img-fluid" :alt="movie.title"/>
+						<img :src="movie.posters[movie.posterindex]" class="poster img-fluid" :alt="movie.title" @click="posterClick(index)"/>
 						<div class="imageInfo">{{ movie.posterindex + 1 }} / {{ movie.posters.length }}</div>
 
-						<p class="title">{{ movies.title }} ({{ movies[0].country }})</p>
-						<p class="score"><i class="bi bi-star" aria-hidden="true"></i> {{ movies[0].iscore }} </p>
-						<p class="runtime">Runtime: {{ movies[0].runtime }}</p>
-						<p class="released">Released:{{ formatReleaseDate(movies[0].released) }} | Rated: {{ movies[0].rating }}</p>
-						<p class="websites">Websites: <a :href="movies[0].imdb" target="_blank">imdb</a> | <a :href="movies[0].website" target="_blank">website</a></p>
+						<p class="title">{{ movie.title }} ({{ movie.country }})</p>
+						<p class="score"><i class="bi bi-star" aria-hidden="true"></i> {{ movie.iscore }} </p>
+						<p class="runtime">Runtime: {{ timeText(movie.runtime) }}</p>
+						<p class="released">Released:{{ makeTextDate(movie.released) }} | Rated: {{ movie.rating }}</p>
+						<p class="websites">Websites: <a :href="movie.imdb" target="_blank">imdb</a> | <a :href="movie.website" target="_blank">website</a></p>
 
 			            <div class="social">
-			              <p class="likes"><i class="bi bi-hand-thumbs-up" aria-hidden="true"></i> {{ movies[0].likes }}</p>
-			              <p class="dislikes"><i class="bi bi-hand-thumbs-down"></i> {{ movies[0].dislikes }} </p>
-			            </div>
+							<!-- Like Button -->
+							<p class="likes">
+								<button class="btn btn-success" @click="like(index)">
+									<i class="bi bi-hand-thumbs-up" aria-hidden="true"></i> {{ movie.likes }}
+								</button>
+							</p>
+						
+							<!-- Dislike Button -->
+							<p class="dislikes">
+								<button class="btn btn-danger" @click="dislike(index)">
+									<i class="bi bi-hand-thumbs-down"></i> {{ movie.dislikes }}
+								</button>
+							</p>
+						</div>
 	            </div>
 	        </div>
 
