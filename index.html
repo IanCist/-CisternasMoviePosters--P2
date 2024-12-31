@@ -31,34 +31,31 @@
 	    </div>
 
 	    <div class="main">
-
-	      <div class="row" v-for="(movie, index) in movies" :key="index">
-
-	        <div class="col-md-6">
-	            <div class="thumbnail">
-
-						<img :src="movie.posters[movie.posterindex]" class="poster img-fluid" :alt="movie.title" @click="posterClick(index)"/>
+			<div class="row">
+				<div class="col-md-4 col-sm-6 mb-4" v-for="(movie, index) in movies" :key="index">
+					<div class="thumbnail text-center">
+						<img :src="movie.posters[movie.posterindex]" class="poster img-fluid rounded" :alt="movie.title" @click="posterClick(index)" />
 						<div class="imageInfo">{{ movie.posterindex + 1 }} / {{ movie.posters.length }}</div>
-
 						<p class="title">{{ movie.title }} ({{ movie.country }})</p>
-						<p class="score"><i class="bi bi-star" aria-hidden="true"></i> {{ movie.iscore }} </p>
+						<p class="score"><i class="bi bi-star" aria-hidden="true"></i> {{ movie.iscore }}</p>
 						<p class="runtime">Runtime: {{ timeText(movie.runtime) }}</p>
-						<p class="released">Released:{{ makeTextDate(movie.released) }} | Rated: {{ movie.rating }}</p>
-						<p class="websites">Websites: <a :href="movie.imdb" target="_blank">imdb</a> | <a :href="movie.website" target="_blank">website</a></p>
-
-			            <div class="social">
+						<p class="released">Released: {{ makeTextDate(movie.released) }} | Rated: {{ movie.rating }}</p>
+						<p class="websites">Websites: 
+							<a :href="movie.imdb" target="_blank">IMDB</a> | 
+							<a :href="movie.website" target="_blank">Website</a>
+						</p>
+						<div class="social d-flex justify-content-between px-3">
 							<div class="likes" @click="like(index)">
-							  <i class="bi bi-hand-thumbs-up"></i> {{ movie.likes }}
+								<i class="bi bi-hand-thumbs-up"></i> {{ movie.likes }}
 							</div>
 							<div class="dislikes" @click="dislike(index)">
-							  <i class="bi bi-hand-thumbs-down"></i> {{ movie.dislikes }}
+								<i class="bi bi-hand-thumbs-down"></i> {{ movie.dislikes }}
 							</div>
-						  </div>
-	            </div>
-	        </div>
-
-	      </div>
-	    </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 	    <div class="footer">
 	      <div class="container">

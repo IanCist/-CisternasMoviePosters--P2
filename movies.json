@@ -68,5 +68,19 @@
             "likes": 812,
             "dislikes": 101,
             "posterindex": 0
+      },
+      {
+            "title": "Wonder",
+            "iscore": 7.9,
+            "rating": "PG",
+            "runtime": 113,
+            "released": [2017, 11, 14],
+            "country": "USA",
+            "posters": ["img/wonder.jpg"],
+            "imdb": "https://www.imdb.com/title/tt2543472/?ref_=fn_all_ttl_1",
+            "website": "https://www.lionsgate.com/movies/wonder",
+            "likes": 1500,
+            "dislikes": 250,
+            "posterindex": 0
       }
 ]
