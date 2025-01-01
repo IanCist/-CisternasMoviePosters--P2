@@ -32,12 +32,15 @@
 
 	    <div class="main">
 			<div class="row">
-				<div class="col-md-4 col-sm-6 mb-4" v-for="(movie, index) in movies" :key="index">
+				<div class="col-md-4 col-sm-6 mb-4 position-relative" v-for="(movie, index) in movies" :key="index">
 					<div class="thumbnail text-center">
+						<!-- Rating -->
+						<p class="score"><i class="bi bi-star"></i> {{ movie.iscore }}</p>
+						<!-- Poster Image -->
 						<img :src="movie.posters[movie.posterindex]" class="poster img-fluid rounded" :alt="movie.title" @click="posterClick(index)" />
+						<!--Movie Info-->
 						<div class="imageInfo">{{ movie.posterindex + 1 }} / {{ movie.posters.length }}</div>
 						<p class="title">{{ movie.title }} ({{ movie.country }})</p>
-						<p class="score"><i class="bi bi-star" aria-hidden="true"></i> {{ movie.iscore }}</p>
 						<p class="runtime">Runtime: {{ timeText(movie.runtime) }}</p>
 						<p class="released">Released: {{ makeTextDate(movie.released) }} | Rated: {{ movie.rating }}</p>
 						<p class="websites">Websites: 
