@@ -82,5 +82,18 @@
             "likes": 1500,
             "dislikes": 250,
             "posterindex": 0
+      },
+      {
+            "title": "Muchachos, la pelicula de la gente",
+            "iscore": 8.1,
+            "rating": "10+",
+            "runtime": 100,
+            "released": [2023, 12, 7],
+            "country": "Argentina",
+            "posters": ["img/muchachos.jpg", "img/muchachos_2.jpg", "img/muchachos_3.jpeg"],
+            "imdb": "https://www.imdb.com/title/tt30394627/",
+            "likes": 3234,
+            "dislikes": 55,
+            "posterindex": 0
       }
 ]
