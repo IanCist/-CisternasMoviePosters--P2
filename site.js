@@ -37,7 +37,7 @@ const vue_app = Vue.createApp({
         return {
           // Holds your movies.json data
           movies: [],
-          appTitle: "IS219 Movie Gallery",
+          appTitle: "Now Showing",
           owner: "Ian Cisternas",
           githubLink: "https://github.com/IanCist/-CisternasMoviePosters--P2"
         };
