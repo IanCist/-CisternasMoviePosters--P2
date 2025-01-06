@@ -5,7 +5,7 @@ body {
     padding: 0;
     width: 100%;
     overflow: auto;
-    background-image: url(img/geometry.jpg);
+    background-image: url(img/movietheater.jpg);
 }
 
 /* This stylizes the header area */
@@ -20,7 +20,7 @@ body {
 /* This stylizes the main page area */
 .main {
     padding: 20px;
-    background-color: #f8f9fa; /* Light gray background */
+    background-color: black; /* Light gray background */
     min-height: 100vh;
 }
 

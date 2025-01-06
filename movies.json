@@ -95,5 +95,19 @@
             "likes": 3234,
             "dislikes": 55,
             "posterindex": 0
+      },
+      {
+            "title": "Toy Story 3",
+            "iscore": 8.3,
+            "rating": "G",
+            "runtime": 103,
+            "released": [2010, 6, 18],
+            "country": "United States",
+            "posters": ["img/toy story 1.jpg", "img/toy story 2.jpg"],
+            "imdb": "https://www.imdb.com/title/tt0435761/",
+            "website": "https://toystory.disney.com/",
+            "likes": 200000,
+            "dislikes": 50000,
+            "posterindex": 0
       }
 ]
